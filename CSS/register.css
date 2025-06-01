@@ -4,28 +4,34 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Poppins', sans-serif;
-  min-height: 100vh;
-  background: url('https://lnct.ac.in/wp-content/uploads/2021/05/LNCT-Group-of-colleges-20.jpg') no-repeat center center/cover;
-  background-attachment: fixed; /* keeps bg fixed while scrolling */
-  display: flex;
-  justify-content: center;    /* horizontal center */
-  padding: 40px 20px;
-  margin: 0;
   position: relative;
-  overflow-y: auto;           /* allow page scroll */
-  animation: bgZoom 20s infinite alternate ease-in-out;
+  min-height: 100vh;
+  background-color: #121212; /* dark base color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: white;
+  overflow-y: auto;
 }
 
 body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-  z-index: 0;
+  content: "";
+  position: fixed; /* fixed so it stays put while scrolling */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://lnct.ac.in/wp-content/uploads/2021/05/LNCT-Group-of-colleges-20.jpg') no-repeat center center;
+  background-size: cover;
+  filter: blur(12px);
+  opacity: 0.3; /* subtle transparency */
+  z-index: -1; /* behind all content */
 }
+
+
 
 .register-container {
   position: relative;
